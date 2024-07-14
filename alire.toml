@@ -1,0 +1,16 @@
+name = "gfx"
+description = "Platform Independent Graphics Library"
+version = "0.1.0-dev"
+
+authors = ["Vadim Godunko"]
+maintainers = ["Vadim Godunko <vgodunko@gmail.com>"]
+maintainers-logins = ["godunko"]
+licenses = "Apache-2.0 WITH LLVM-exception"
+tags = ["graphics"]
+
+project-files = ["gnat/gfx.gpr"]
+
+[configuration]
+generate_ada = false
+generate_c = false
+generate_gpr = true
