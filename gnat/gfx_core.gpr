@@ -1,0 +1,21 @@
+--
+--  Copyright (C) 2024, Vadim Godunko <vgodunko@gmail.com>
+--
+--  SPDX-License-Identifier: Apache-2.0 WITH LLVM-exception
+--
+
+with "../config/gfx_core_config.gpr";
+
+with "gfx_common.gpr";
+
+project GFX_Core is
+
+   for Source_Dirs use ("../source");
+   for Object_Dir use
+     "../.objs/" & GFX_Core_Config.Build_Profile & GFX_Common.Object_Dir_Suffix;
+
+   package Compiler is
+      for Switches ("Ada") use GFX_Core_Config.Ada_Compiler_Switches;
+   end Compiler;
+
+end GFX_Core;

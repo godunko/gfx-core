@@ -1,0 +1,18 @@
+--
+--  Copyright (C) 2024, Vadim Godunko <vgodunko@gmail.com>
+--
+--  SPDX-License-Identifier: Apache-2.0 WITH LLVM-exception
+--
+
+with "../config/gfx_core_config.gpr";
+
+abstract project GFX_Common is
+
+   Target      := Project'Target;
+   Runtime_Ada := Project'Runtime ("Ada");
+   --  Target and Runtime_Ada is used to use separate object directorties for
+   --  each target/runtime pair.
+
+   Object_Dir_Suffix := "/" & Target & "/" & Runtime_Ada;
+
+end GFX_Common;
