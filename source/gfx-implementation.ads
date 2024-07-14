@@ -1,0 +1,11 @@
+--
+--  Copyright (C) 2024, Vadim Godunko <vgodunko@gmail.com>
+--
+--  SPDX-License-Identifier: Apache-2.0 WITH LLVM-exception
+--
+
+package GFX.Implementation
+  with Pure
+is
+
+end GFX.Implementation;
