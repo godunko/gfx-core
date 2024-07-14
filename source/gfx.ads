@@ -6,17 +6,23 @@
 
 pragma Restrictions (No_Elaboration_Code);
 
+private with Ada.Numerics.Generic_Elementary_Functions;
 with Interfaces;
 
 package GFX
   with Pure
 is
 
-   type Real is new Interfaces.IEEE_Float_32;
+   type GX_Real is new Interfaces.IEEE_Float_32;
+
+   subtype Real is GX_Real;
+   --  XXX Temporary for transition
 
    type GX_Integer is new Interfaces.Integer_32;
 
    type GX_Unsigned is new Interfaces.Unsigned_32;
+
+   function Sqrt (Item : GX_Real) return GX_Real;
 
    type RGBA8888 is private with Preelaborable_Initialization;
 
@@ -38,6 +44,12 @@ private
    --  conversion between them.
 
    pragma Assert (GX_Integer'Size = GX_Unsigned'Size);
+
+   package GX_Real_Elementary_Functions is
+     new Ada.Numerics.Generic_Elementary_Functions (GX_Real);
+
+   function Sqrt (Item : GX_Real) return GX_Real
+     renames GX_Real_Elementary_Functions.Sqrt;
 
    type RGBA8888 is new Interfaces.Unsigned_32;
 
