@@ -22,7 +22,7 @@ package body GFX.Vectors is
    ---------------
 
    function Normalize (Self : GF_Vector) return GF_Vector is
-      Length : constant Real := Sqrt (Self.X * Self.X + Self.Y * Self.Y);
+      Length : constant GX_Real := Sqrt (Self.X * Self.X + Self.Y * Self.Y);
 
    begin
       return (X => Self.X / Length, Y => Self.Y / Length);

@@ -13,8 +13,8 @@ package GFX.Points
 is
 
    type GF_Point is record
-      X : GFX.Real;
-      Y : GFX.Real;
+      X : GFX.GX_Real;
+      Y : GFX.GX_Real;
    end record;
 
    function "+"

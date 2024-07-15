@@ -11,8 +11,8 @@ package GFX.Vectors
 is
 
    type GF_Vector is record
-      X : GFX.Real;
-      Y : GFX.Real;
+      X : GFX.GX_Real;
+      Y : GFX.GX_Real;
    end record;
 
    function "*" (Left : GF_Vector; Right : GX_Real) return GF_Vector;
