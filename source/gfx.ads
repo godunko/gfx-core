@@ -42,8 +42,16 @@ private
    --
    --  GX_Integer and GX_Unsigned must have same size to allow unchecked
    --  conversion between them.
+   --
+   --  GX_Integer_2 and GX_Unsigned_2 are used by fixed point comuptation and
+   --  must be two times wider than GX_Integer/GX_Unsigned.
+
+   type GX_Integer_2 is new Interfaces.Integer_64;
+   type GX_Unsigned_2 is new Interfaces.Unsigned_64;
 
    pragma Assert (GX_Integer'Size = GX_Unsigned'Size);
+   pragma Assert (GX_Integer_2'Size = GX_Unsigned_2'Size);
+   pragma Assert (GX_Integer_2'Size = GX_Integer'Size * 2);
 
    package GX_Real_Elementary_Functions is
      new Ada.Numerics.Generic_Elementary_Functions (GX_Real);
