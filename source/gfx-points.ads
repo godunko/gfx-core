@@ -6,6 +6,8 @@
 
 pragma Restrictions (No_Elaboration_Code);
 
+with GFX.Vectors;
+
 package GFX.Points
   with Pure
 is
@@ -14,5 +16,14 @@ is
       X : GFX.Real;
       Y : GFX.Real;
    end record;
+
+   function "+"
+     (Left : GF_Point; Right : GFX.Vectors.GF_Vector) return GF_Point;
+
+   function "-"
+     (Left : GF_Point; Right : GF_Point) return GFX.Vectors.GF_Vector;
+
+   function "-"
+     (Left : GF_Point; Right : GFX.Vectors.GF_Vector) return GF_Point;
 
 end GFX.Points;
