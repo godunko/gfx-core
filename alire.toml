@@ -1,5 +1,5 @@
 name = "gfx_core"
-description = "Platform Independent Graphics Library"
+description = "Modular Portable Graphics Library, Core Components"
 version = "0.1.0-dev"
 
 authors = ["Vadim Godunko"]
