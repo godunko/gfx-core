@@ -15,9 +15,6 @@ is
 
    type GX_Real is new Interfaces.IEEE_Float_32;
 
-   subtype Real is GX_Real;
-   --  XXX Temporary for transition
-
    type GX_Integer is new Interfaces.Integer_32;
 
    type GX_Unsigned is new Interfaces.Unsigned_32;
